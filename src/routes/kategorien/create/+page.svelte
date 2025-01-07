@@ -41,13 +41,14 @@
         <p style="color: red;">{error}</p>
     {/if}
 
-    <form on:submit|preventDefault={handleSubmit}>
+    <form action="?/categoryCreate" method="POST">
         <label for="name">Name:</label>
-        <input id="name" type="text" bind:value={newCategory.name} required />
+        <input id="name" name = "name" type="text" bind:value={newCategory.name} required />
 
         <label for="beschreibung">Beschreibung:</label>
         <textarea
             id="beschreibung"
+            name ="desc"
             bind:value={newCategory.beschreibung}
             required
         ></textarea>

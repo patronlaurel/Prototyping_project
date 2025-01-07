@@ -52,10 +52,19 @@
   .detail-page {
     max-width: 900px;
     margin: 2rem auto;
-    padding: 1rem;
-    background-color: #f9f9f9;
+    padding: 0 1rem;
+  }
+
+  .detail-container img {
+    max-width: 400px;  /* Reduced from default */
+    max-height: 300px; /* Added height constraint */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   /* Zurück-Button */
