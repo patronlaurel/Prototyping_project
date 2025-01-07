@@ -2,9 +2,8 @@
   export let data;
   let recipe = data.recipe;
 
-  // Funktion für den "Zurück"-Button
   function goBack() {
-    history.back(); // Navigiert zur vorherigen Seite
+    history.back(); 
   }
 
   async function handleDelete() {
@@ -27,9 +26,7 @@
 
 <div class="detail-page">
   {#if recipe}
-    <!-- Zurück-Button -->
     <button class="back-button" on:click={goBack}>⬅ Zurück</button>
-    <!-- Rezeptdetails -->
     <div class="detail-container">
       <img src={recipe.bild} alt={recipe.name} />
       <h1>{recipe.name}</h1>
@@ -48,7 +45,6 @@
 </div>
 
 <style>
-  /* Gesamtcontainer für die Detailseite */
   .detail-page {
     max-width: 900px;
     margin: 2rem auto;
@@ -56,8 +52,8 @@
   }
 
   .detail-container img {
-    max-width: 400px;  /* Reduced from default */
-    max-height: 300px; /* Added height constraint */
+    max-width: 400px;  
+    max-height: 300px; 
     width: auto;
     height: auto;
     object-fit: contain;
@@ -67,7 +63,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Zurück-Button */
   .back-button {
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -96,7 +91,6 @@
     transform: translateY(0);
   }
 
-  /* Detailcontainer */
   .detail-container {
     text-align: center;
   }
